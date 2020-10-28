@@ -3,6 +3,19 @@ var gamePatter = [];
 
 var buttonColours = ["red", "blue", "green", "yellow"];
 
+var userClickedPattern = [];
+
+//1. Use jQuery to detect when any of the buttons are clicked and trigger a handler function.
+$(".btn").click(function() {
+
+    //2. Inside the handler, create a new variable called userChosenColour to store the id of the button that got clicked.
+    var userChosenColour = $(this).attr("id");
+  
+    //4. Add the contents of the variable userChosenColour created in step 2 to the end of this new userClickedPattern
+    userClickedPattern.push(userChosenColour);
+  
+  });
+
 function nextSequence() {
 
     //generamos aleatorio y lo ponemos el la ultima posicion del array
